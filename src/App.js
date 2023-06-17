@@ -9,20 +9,20 @@ function App() {
   const [play] = useSound(morse, {
     interrupt: false,
   });
-  const [playSound, setPlaySound] = useState(0);
+  const [playSound, setPlaySound] = useState(false);
   const [top, setTop] = useState(0);
   const [left, setLeft] = useState(0);
 
   const longPress = useLongPress(() => {
-    if (playSound === 0) {
-      setPlaySound(1);
-      play();
+    if (!playSound) {
+      console.log("long");
+      setPlaySound(true);
     }
   }, 2000);
 
   return (
     <div>
-      {playSound === 0 && (
+      {!playSound && (
         <img
           src={raccoon}
           alt="raccoon"
@@ -30,12 +30,16 @@ function App() {
           style={{ top: top + "px", left: left + "px" }}
           {...longPress}
           onClick={() => {
+            console.log("short");
             setTop(Math.floor(Math.random() * (window.innerHeight - 186)));
             setLeft(Math.floor(Math.random() * (window.innerWidth - 252)));
+            if (setPlaySound) {
+              play();
+            }
           }}
         />
       )}
-      {playSound === 1 && (
+      {playSound && (
         <div id="speaker-wrapper">
           <img
             src={speaker}
