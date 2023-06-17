@@ -8,6 +8,10 @@ import speaker from "./speaker.png";
 function App() {
   const [play] = useSound(morse, {
     interrupt: false,
+    onend: () => {
+      console.log("end");
+    },
+    loop: true,
   });
   const [playSound, setPlaySound] = useState(0);
   const [top, setTop] = useState(0);
