@@ -1,12 +1,9 @@
 import "./App.css";
-import morse from "./morse.wav";
 import { useState, useEffect, useCallback } from "react";
 import raccoon from "./fat-raccoon.png";
-import speaker from "./speaker.png";
-import { useGlobalAudioPlayer } from "react-use-audio-player";
+import Sound from "./Sound";
 
 function App() {
-  const { load } = useGlobalAudioPlayer();
   const [playSound, setPlaySound] = useState(0);
   const [top, setTop] = useState(0);
   const [left, setLeft] = useState(0);
@@ -14,10 +11,6 @@ function App() {
   const longPress = useLongPress(() => {
     if (playSound === 0) {
       setPlaySound(1);
-      load(morse, {
-        autoplay: true,
-        loop: true,
-      });
     }
   }, 2000);
 
@@ -36,16 +29,7 @@ function App() {
           }}
         />
       )}
-      {playSound === 1 && (
-        <div id="speaker-wrapper">
-          <img
-            src={speaker}
-            alt="speaker"
-            id="speaker"
-            onDragStart={(e) => e.preventDefault()}
-          />
-        </div>
-      )}
+      {playSound === 1 && <Sound />}
     </div>
   );
 }
