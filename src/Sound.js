@@ -2,19 +2,12 @@ import "./App.css";
 import morse from "./morse.wav";
 import { useEffect } from "react";
 import speaker from "./speaker.png";
-import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 function Sound() {
-  const { load } = useGlobalAudioPlayer();
-
   useEffect(() => {
-    load(morse, {
-      autoplay: true,
-      loop: true,
-      html5: true,
-      initialMute: false,
-    });
-  }, [load]);
+    let audio = new Audio(morse)
+    audio.play();
+  }, []);
 
   return (
     <div id="speaker-wrapper">
