@@ -5,7 +5,6 @@ import speaker from "./speaker.png";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 function Sound() {
-  console.log("aaa");
   const { load } = useGlobalAudioPlayer();
 
   useEffect(() => {
