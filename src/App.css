@@ -6,6 +6,10 @@
   top: 0px; 
   left: 0px; 
   transition: all 200ms;
+  user-select: none; 
+  -webkit-user-select: none; 
+  -webkit-touch-callout: none;
+
 }
 
 #speaker-wrapper {
