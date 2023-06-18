@@ -1,25 +1,13 @@
-#raccoon { 
-  width: 252px;
-  height: 186px;
-  cursor: pointer;
-  position: absolute; 
-  top: 0px; 
-  left: 0px; 
-  transition: all 200ms;
-  user-select: none; 
-  -webkit-user-select: none; 
-  -webkit-touch-callout: none;
-
-}
-
-#speaker-wrapper {
-  width: 100vw;
-  height: 100vh;
+.wrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgb(249,63,25);
 }
 
-#speaker {
-  width:50vw;
+.speaker {
+  cursor: pointer;
 }

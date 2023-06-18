@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/secret/static/css/main.3c0d5da3.css",
-    "main.js": "/secret/static/js/main.1aa0ae5b.js",
+    "main.css": "/secret/static/css/main.f87005a1.css",
+    "main.js": "/secret/static/js/main.1138b491.js",
     "static/js/787.cfd058ed.chunk.js": "/secret/static/js/787.cfd058ed.chunk.js",
-    "static/media/fat-raccoon.png": "/secret/static/media/fat-raccoon.c7b38a583a0269437f55.png",
     "static/media/morse.wav": "/secret/static/media/morse.7e0f691422e20f2d3746.wav",
-    "static/media/speaker.png": "/secret/static/media/speaker.f999c44c690a1119bcd4.png",
     "index.html": "/secret/index.html",
-    "main.3c0d5da3.css.map": "/secret/static/css/main.3c0d5da3.css.map",
-    "main.1aa0ae5b.js.map": "/secret/static/js/main.1aa0ae5b.js.map",
+    "main.f87005a1.css.map": "/secret/static/css/main.f87005a1.css.map",
+    "main.1138b491.js.map": "/secret/static/js/main.1138b491.js.map",
     "787.cfd058ed.chunk.js.map": "/secret/static/js/787.cfd058ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c0d5da3.css",
-    "static/js/main.1aa0ae5b.js"
+    "static/css/main.f87005a1.css",
+    "static/js/main.1138b491.js"
   ]
 }
