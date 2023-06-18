@@ -12,6 +12,7 @@ function Sound() {
       autoplay: true,
       loop: true,
       html5: true,
+      initialMute: false,
     });
   }, [load]);
 
