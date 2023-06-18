@@ -11,6 +11,7 @@ function Sound() {
     load(morse, {
       autoplay: true,
       loop: true,
+      html5: true,
     });
   }, [load]);
 
