@@ -27,6 +27,11 @@ function App() {
             setTop(Math.floor(Math.random() * (window.innerHeight - 186)));
             setLeft(Math.floor(Math.random() * (window.innerWidth - 252)));
           }}
+          onContextMenu={(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          }}
         />
       )}
       {playSound === 1 && <Sound />}
