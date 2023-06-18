@@ -1,13 +1,10 @@
 import "./App.css";
 import morse from "./morse.wav";
-import { useEffect } from "react";
+import { useState } from "react";
 import speaker from "./speaker.png";
 
 function Sound() {
-  useEffect(() => {
-    let audio = new Audio(morse)
-    audio.play();
-  }, []);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <div id="speaker-wrapper">
@@ -16,6 +13,16 @@ function Sound() {
         alt="speaker"
         id="speaker"
         onDragStart={(e) => e.preventDefault()}
+        onClick={() => {
+          if (!isPlaying) {
+            setIsPlaying(true);
+            let audio = new Audio(morse);
+            audio.play();
+            audio.onended(()=>{
+                setIsPlaying(false);
+            })
+          }
+        }}
       />
     </div>
   );
